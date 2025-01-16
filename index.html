@@ -7,17 +7,42 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Flexisaf JavaScript Array Refresher</h1>
+  <h1>Flexisaf JavaScript Refresher</h1>
   <p>We open the developer console to view the array operations successfully.</p>
   <button id="showArrayBtn">Show Array</button>
 
   <script>
+    //let
+    let myName = "muhammad"
+    console.log("a variable" + myName + " is declared");
+    
+
+    //const
+    const fName = "muhammad"
+    console.log("a constant " + myName + " is declared");
+
+    //normal function
+    function newTask (lName) {
+        console.log("printing " + lName + " using normal function");
+    }
+    newTask('Auwal');
+
+    //arrow function
+    const multiply = number => number * 2
+    console.log("printing " + multiply(2) + " using an arrow function");
+    
+    
     // Define an array
     const fruits = ["Apple", "Banana", "Orange", "Mango", "Grapes"];
 
     // Display a message in the console when the button is clicked
     document.getElementById("showArrayBtn").addEventListener("click", () => {
-      console.log("Original Array:", fruits);
+    console.log("we used let to create a variable value");
+    console.log("we used const to create a constant value, something that can only be assigned once and cannot be change");
+    
+
+
+    console.log("Original Array:", fruits);
 
       // Perform some array operations
       fruits.push("Pineapple"); // Add a new item
