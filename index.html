@@ -12,53 +12,58 @@
   <button id="showArrayBtn">Show Array</button>
 
   <script>
-    //let
-    let myName = "muhammad"
-    console.log("a variable" + myName + " is declared");
-    
+    // Declare variables and constants
+    let myName = "Muhammad";
+    console.log(`A variable "${myName}" is declared using let.`);
 
-    //const
-    const fName = "muhammad"
-    console.log("a constant " + myName + " is declared");
+    const fName = "Muhammad";
+    console.log(`A constant "${fName}" is declared using const.`);
 
-    //normal function
-    function newTask (lName) {
-        console.log("printing " + lName + " using normal function");
+    // Normal function
+    function displayLastName(lName) {
+      console.log(`Printing "${lName}" using a normal function.`);
     }
-    newTask('Auwal');
+    displayLastName("Auwal");
 
-    //arrow function
-    const multiply = number => number * 2
-    console.log("printing " + multiply(2) + " using an arrow function");
-    
-    
-    // Define an array
+    // Arrow function
+    const multiply = (number) => number * 2;
+    console.log(`Printing ${multiply(2)} using an arrow function.`);
+
+    // Array operations
     const fruits = ["Apple", "Banana", "Orange", "Mango", "Grapes"];
 
-    // Display a message in the console when the button is clicked
-    document.getElementById("showArrayBtn").addEventListener("click", () => {
-    console.log("we used let to create a variable value");
-    console.log("we used const to create a constant value, something that can only be assigned once and cannot be change");
-    
+    const performArrayOperations = () => {
+      console.log("----- Array Operations -----");
+      console.log("Original Array:", fruits);
 
-
-    console.log("Original Array:", fruits);
-
-      // Perform some array operations
-      fruits.push("Pineapple"); // Add a new item
+      // Add a new item to the end
+      fruits.push("Pineapple");
       console.log("After adding Pineapple:", fruits);
 
-      fruits.pop(); // Remove the last item
+      // Remove the last item
+      fruits.pop();
       console.log("After removing the last item:", fruits);
 
-      fruits.shift(); // Remove the first item
+      // Remove the first item
+      fruits.shift();
       console.log("After removing the first item:", fruits);
 
-      fruits.unshift("Strawberry"); // Add a new item at the beginning
+      // Add a new item to the beginning
+      fruits.unshift("Strawberry");
       console.log("After adding Strawberry at the beginning:", fruits);
 
-      const sortedFruits = fruits.sort(); // Sort the array
+      // Sort the array
+      const sortedFruits = fruits.sort();
       console.log("Sorted Array:", sortedFruits);
+    };
+
+    // Button click event listener
+    document.getElementById("showArrayBtn").addEventListener("click", () => {
+      console.log("----- Variable Scopes Explanation -----");
+      console.log(`We used let to create a variable with a block scope.`);
+      console.log(`We used const to create a constant value that cannot be reassigned.`);
+
+      performArrayOperations();
     });
   </script>
 </body>
