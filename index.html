@@ -31,6 +31,7 @@
 
     // Array operations
     const fruits = ["Apple", "Banana", "Orange", "Mango", "Grapes"];
+    const numbers = [10, 20, 30, 40, 50];
 
     const performArrayOperations = () => {
       console.log("----- Array Operations -----");
@@ -55,6 +56,31 @@
       // Sort the array
       const sortedFruits = fruits.sort();
       console.log("Sorted Array:", sortedFruits);
+
+      // Additional Array Exercises
+      console.log("----- Additional Array Exercises -----");
+
+      // forEach - Print each fruit
+      console.log("Using forEach to print each fruit:");
+      fruits.forEach((fruit, index) => {
+        console.log(`Fruit at index ${index}: ${fruit}`);
+      });
+
+      // map - Convert all fruit names to uppercase
+      const upperCaseFruits = fruits.map(fruit => fruit.toUpperCase());
+      console.log("Using map to convert all fruit names to uppercase:", upperCaseFruits);
+
+      // filter - Get fruits with names longer than 5 characters
+      const longFruits = fruits.filter(fruit => fruit.length > 5);
+      console.log("Using filter to get fruits with names longer than 5 characters:", longFruits);
+
+      // reduce - Calculate the sum of numbers
+      const totalSum = numbers.reduce((sum, num) => sum + num, 0);
+      console.log("Using reduce to calculate the sum of numbers:", totalSum);
+
+      // reduce - Create a string of fruit names separated by commas
+      const fruitString = fruits.reduce((acc, fruit) => acc + fruit + ", ", "").slice(0, -2);
+      console.log("Using reduce to create a comma-separated string of fruit names:", fruitString);
     };
 
     // Button click event listener
